@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>StyleBee</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Cairo',sans-serif;background:#fff;margin:0;text-align:center}
+header{background:#f3c1d9;padding:20px}
+.product{border:1px solid #ddd;margin:20px;padding:20px}
+button{background:#d4af37;color:#fff;border:none;padding:10px 20px;font-size:16px}
+select{padding:8px;margin:10px}
+</style>
+</head>
+<body>
+<header>
+<h1>StyleBee</h1>
+<p>أناقة يومية بثمن في المتناول</p>
+</header>
+<div class="product">
+<h2>انصومبل صاري</h2>
+<p><strong>189 MAD</strong></p>
+<label>اختر المقاس</label><br>
+<select id="size">
+<option>M</option><option>L</option><option>XL</option><option>XXL</option>
+</select><br><br>
+<button onclick="order()">اطلب عبر واتساب</button>
+</div>
+<script>
+function order(){
+let size=document.getElementById('size').value;
+let msg = "السلام عليكم
+أرغب في طلب انصومبل صاري
+المقاس: "+size+"
+الثمن: 189 MAD
+التوصيل داخل مراكش";
+window.open("https://wa.me/212703655235?text="+encodeURIComponent(msg));
+}
+</script>
+</body>
+</html>
